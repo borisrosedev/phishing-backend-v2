@@ -17,7 +17,7 @@ app.get('/', (req,res) => {
 
 app.post('/wed', (req, res) => {
     console.log(req.body)
-    return res.status(200).json(data: {req.body})
+    return res.status(200).json({data: req.body})
 }
 
 app.post('/register', (req, res) => {

@@ -15,6 +15,19 @@ app.get('/', (req,res) => {
 })
 
 
+
+app.get('/ip', (req, res) => {
+
+    console.log(req.url ?? 'no url gotten')
+    console.log(req.ip ?? 'no ip gotten')
+    return res.status(200).json({ ip : req.ip })
+    
+})
+
+
+
+
+
 app.post('/wed', (req, res) => {
     console.log(req.body)
     return res.status(200).json({data: req.body})

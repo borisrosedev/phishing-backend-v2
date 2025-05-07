@@ -14,6 +14,12 @@ app.get('/', (req,res) => {
     return res.status(200).json('Hello les amis')
 })
 
+
+app.post('/wed', (req, res) => {
+    console.log(req.body)
+    return res.status(200).json(data: {req.body})
+}
+
 app.post('/register', (req, res) => {
     const { email, password, confirmedPassword } = req.body
     if(email){
